@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Silai Ghar — a hyperlocal tailor discovery mobile app for Mumbai. Modeled after Google Maps/Zomato but focused on tailoring services. Warm color palette (cream, beige, soft brown, muted maroon). Features: home screen with search, location selector, promoted tailors carousel, and category grid; search results with filter options; tailor profile pages; map view with pins; booking confirmation screen. 5–7 screens total.",
+  "architectural_notes": [
+    "Mobile app (2D UI prototype), warm palette: cream, beige, soft brown, muted maroon",
+    "Hyperlocal focus: Mumbai neighborhoods (Andheri, Bandra, Juhu, Santacruz, etc.)",
+    "Map + list hybrid view as core navigation pattern"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-apply-a-warm-minimal-visual-theme-across-all-screens-cream-beige-backgrounds-soft-brown-and-muted-maroon-accents-clean-sans-serif-typography-card-based-layouts-with-subtle-shadows-and-a-bottom-navigation-bar-with-icons-for-home-search-map-and-bookings-the-overall-feel-should-be-hyperlocal-community-driven-and-trustworthy",
+      "title": "Apply a warm, minimal visual theme across all screens: cream/beige backgrounds, soft brown and muted maroon accents, clean sans-serif typography, card-based layouts with subtle shadows, and a bottom navigation bar with icons for Home, Search, Map, and Bookings. The overall feel should be hyperlocal, community-driven, and trustworthy.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-home-screen-that-includes-1-a-top-location-selector-chip-showing-the-current-mumbai-neighborhood-e-g-andheri-west-bandra-east-with-a-dropdown-of-available-areas-2-a-full-width-search-bar-with-placeholder-text-search-for-tailors-styles-locations-3-a-horizontally-scrollable-promoted-tailors-carousel-with-featured-badge-overlaid-on-each-card-4-a-category-grid-with-six-tiles-western-wear-ethnic-wear-bridal-wear-alterations-kids-wear-men-s-formal-wear-each-with-an-icon-and-label",
+      "title": "Build a Home screen that includes: (1) a top location selector chip showing the current Mumbai neighborhood (e.g., Andheri West, Bandra East) with a dropdown of available areas; (2) a full-width search bar with placeholder text 'Search for tailors, styles, locations…'; (3) a horizontally scrollable Promoted Tailors carousel with 'Featured' badge overlaid on each card; (4) a category grid with six tiles: Western Wear, Ethnic Wear, Bridal Wear, Alterations, Kids Wear, Men's Formal Wear — each with an icon and label.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-search-results-tailor-listing-screen-that-shows-a-scrollable-list-of-tailor-cards-each-card-displays-tailor-name-star-rating-1-5-address-phone-number-distance-from-selected-location-a-small-portfolio-image-thumbnail-price-range-indicator-e-g-and-a-badge-listing-key-services-include-a-filter-icon-button-at-the-top-of-the-list-to-open-the-filter-panel",
+      "title": "Build a Search Results / Tailor Listing screen that shows a scrollable list of tailor cards. Each card displays: tailor name, star rating (1–5), address, phone number, distance from selected location, a small portfolio image thumbnail, price range indicator (e.g., ₹₹, ₹₹₹), and a badge listing key services. Include a filter icon/button at the top of the list to open the Filter panel.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-filter-panel-modal-or-slide-in-drawer-with-the-following-filter-controls-1-location-multi-select-chips-andheri-bandra-juhu-santacruz-versova-khar-vile-parle-2-budget-range-slider-500-20-000-3-style-of-outfit-dropdown-casual-formal-ethnic-bridal-kids-4-delivery-available-toggle-yes-no-5-home-consultation-available-toggle-yes-no-include-apply-filters-and-reset-buttons",
+      "title": "Build a Filter panel (modal or slide-in drawer) with the following filter controls: (1) Location multi-select chips (Andheri, Bandra, Juhu, Santacruz, Versova, Khar, Vile Parle); (2) Budget range slider (₹500 – ₹20,000+); (3) Style of outfit dropdown (Casual, Formal, Ethnic, Bridal, Kids); (4) Delivery Available toggle (Yes/No); (5) Home Consultation Available toggle (Yes/No). Include 'Apply Filters' and 'Reset' buttons.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-tailor-profile-screen-showing-full-details-tailor-name-rating-full-address-phone-number-tappable-to-call-distance-price-range-list-of-services-offered-a-horizontally-scrollable-portfolio-image-gallery-4-6-images-a-book-home-consultation-primary-button-and-a-request-pick-up-delivery-secondary-button-both-buttons-navigate-to-the-booking-confirmation-screen",
+      "title": "Build a Tailor Profile screen showing full details: tailor name, rating, full address, phone number (tappable to call), distance, price range, list of services offered, a horizontally scrollable portfolio image gallery (4–6 images), a 'Book Home Consultation' primary button, and a 'Request Pick-Up & Delivery' secondary button. Both buttons navigate to the Booking Confirmation screen.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-map-view-screen-that-displays-a-stylized-map-placeholder-static-svg-or-image-representing-a-mumbai-neighborhood-grid-with-circular-pin-markers-for-each-tailor-location-tapping-a-pin-shows-a-small-preview-card-below-the-map-with-the-tailor-s-name-rating-and-a-view-profile-link-include-a-toggle-at-the-top-to-switch-between-map-view-and-list-view",
+      "title": "Build a Map View screen that displays a stylized map placeholder (static SVG or image representing a Mumbai neighborhood grid) with circular pin markers for each tailor location. Tapping a pin shows a small preview card below the map with the tailor's name, rating, and a 'View Profile' link. Include a toggle at the top to switch between Map view and List view.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-booking-confirmation-screen-that-shows-selected-tailor-name-and-address-selected-service-type-home-consultation-or-pick-up-delivery-a-date-time-picker-mock-ui-with-selectable-slots-a-text-area-for-special-instructions-and-a-confirm-booking-button-after-tapping-confirm-show-an-inline-success-state-with-a-confirmation-message-and-a-summary-of-the-booking-details",
+      "title": "Build a Booking Confirmation screen that shows: selected tailor name and address, selected service type (Home Consultation or Pick-Up & Delivery), a date/time picker (mock UI with selectable slots), a text area for special instructions, and a 'Confirm Booking' button. After tapping Confirm, show an inline success state with a confirmation message and a summary of the booking details.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-services-highlight-section-on-the-home-screen-below-the-category-grid-displaying-four-service-cards-in-a-2-2-grid-home-pickup-delivery-at-home-tailor-consultation-style-guidance-and-custom-stitching-coordination-each-card-should-have-a-relevant-icon-and-a-one-line-description",
+      "title": "Add a Services Highlight section on the Home screen below the category grid, displaying four service cards in a 2×2 grid: 'Home Pickup & Delivery', 'At-Home Tailor Consultation', 'Style Guidance', and 'Custom Stitching Coordination'. Each card should have a relevant icon and a one-line description.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-store-all-tailor-data-name-rating-address-phone-location-area-price-range-services-list-distance-portfolio-image-references-as-static-mock-data-in-the-frontend-no-backend-persistence-is-required-for-this-prototype-use-react-state-and-react-query-patterns-for-data-flow-between-screens",
+      "title": "Store all tailor data (name, rating, address, phone, location area, price range, services list, distance, portfolio image references) as static mock data in the frontend. No backend persistence is required for this prototype. Use React state and React Query patterns for data flow between screens.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-mock-tailor-dataset-in-frontend-src-data-mocktailors-ts-to-include-200-tailor-entries-each-entry-must-have-a-unique-id-a-realistic-indian-tailor-name-a-randomly-varied-star-rating-3-0-5-0-a-mumbai-area-street-address-including-building-shop-number-street-name-and-neighbourhood-a-10-digit-indian-mobile-phone-number-a-distance-value-0-3-km-8-0-km-a-price-range-indicator-or-one-or-more-services-from-the-existing-services-list-a-location-area-drawn-from-the-existing-areas-list-andheri-bandra-juhu-santacruz-versova-khar-vile-parle-etc-and-portfolio-image-references-reusing-the-existing-image-assets-already-referenced-in-the-codebase-distribute-the-tailors-evenly-across-all-available-location-areas-and-across-all-six-categories-western-wear-ethnic-wear-bridal-wear-alterations-kids-wear-men-s-formal-wear-so-that-filtering-by-any-category-or-location-area-returns-a-meaningful-non-empty-list-the-usetailors-hook-and-all-existing-filter-logic-must-continue-to-work-without-changes",
+      "title": "Expand the mock tailor dataset in `frontend/src/data/mockTailors.ts` to include 200+ tailor entries. Each entry must have: a unique ID, a realistic Indian tailor name, a randomly varied star rating (3.0–5.0), a Mumbai-area street address (including building/shop number, street name, and neighbourhood), a 10-digit Indian mobile phone number, a distance value (0.3 km – 8.0 km), a price range indicator (₹, ₹₹, or ₹₹₹), one or more services from the existing services list, a location area drawn from the existing areas list (Andheri, Bandra, Juhu, Santacruz, Versova, Khar, Vile Parle, etc.), and portfolio image references reusing the existing image assets already referenced in the codebase. Distribute the tailors evenly across all available location areas and across all six categories (Western Wear, Ethnic Wear, Bridal Wear, Alterations, Kids Wear, Men's Formal Wear) so that filtering by any category or location area returns a meaningful, non-empty list. The `useTailors` hook and all existing filter logic must continue to work without changes.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Home screen with search bar, location selector, promoted tailors carousel, and category grid (Western, Ethnic, Bridal, Alterations, Kids, Men's Formal)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Filter panel: location, budget range, outfit style, delivery available, home consultation available",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Tailor listing/search results page showing name, rating, address, phone, distance, portfolio images, price range, services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Tailor profile page with 'Book Home Consultation' button and 'Request Pick-Up & Delivery' option",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Map view with tailor pins that are clickable to preview details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Booking confirmation screen",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Services highlight section: home pickup & delivery, at-home consultation, style guidance, custom stitching coordination",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Promoted Tailors widget — horizontal scroll carousel with 'Featured' badge and clear visual distinction",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Expand mock tailor data to 100–200+ filler tailors with varied names, random phone numbers, addresses, ratings, services, and locations so search and category browsing return rich results",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Silai Ghar",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

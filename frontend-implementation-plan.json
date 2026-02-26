@@ -1,0 +1,31 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Expand mock tailor dataset to 200+ entries",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Expand the mock tailor dataset in `frontend/src/data/mockTailors.ts` to include 200+ tailor entries with realistic Indian names, Mumbai addresses, varied ratings, phone numbers, distances, price ranges, services, areas, and portfolio images, ensuring even distribution across all location areas and all six categories so that filtering and search return meaningful results.",
+      "acceptanceCriteria": [
+        "The mockTailors array contains at least 200 tailor objects.",
+        "Every tailor object has all required fields: id, name, rating, address, phone, distance, priceRange, services, area, and portfolioImages.",
+        "Phone numbers are 10-digit strings prefixed with a Mumbai/India dialling pattern (e.g., 98XXXXXXXX).",
+        "Addresses include a shop/building number, street name, and Mumbai neighbourhood.",
+        "Ratings are numeric values between 3.0 and 5.0 (one decimal place).",
+        "Tailors are spread across all available location areas with at least 10 entries per area.",
+        "Each of the six categories has at least 20 tailors whose services include that category.",
+        "Searching by category tile on the Home screen returns 20+ results for every category.",
+        "Filtering by any single location area chip in the Filter panel returns at least 10 results.",
+        "The Search Results screen shows a total count reflecting the full expanded dataset.",
+        "No existing component or hook files are modified other than `frontend/src/data/mockTailors.ts`."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/mockTailors.ts",
+          "operation": "modify",
+          "description": "Expand the mockTailors array from its current size to at least 200 entries. Generate new tailor objects with: unique sequential IDs continuing from the existing entries; realistic Indian tailor names (mix of Hindi/Marathi and English names); star ratings randomly varied between 3.0 and 5.0 with one decimal place; Mumbai-area street addresses including building/shop number, street name, and neighbourhood; 10-digit Indian mobile phone numbers starting with 98, 99, 97, 96, 90, or 91; distance values randomly varied between 0.3 km and 8.0 km (one decimal place); price range indicators (₹, ₹₹, or ₹₹₹) distributed across entries; services arrays combining one or more categories from the existing six categories (Western Wear, Ethnic Wear, Bridal Wear, Alterations, Kids Wear, Men's Formal Wear); area values drawn from the existing areas list (Andheri, Bandra, Juhu, Santacruz, Versova, Khar, Vile Parle, and any others already defined); and portfolioImages arrays reusing the existing image asset references from `frontend/public/assets/generated/portfolio-outfit-1.dim_400x500.png`, `frontend/public/assets/generated/portfolio-outfit-2.dim_400x500.png`, and `frontend/public/assets/generated/portfolio-outfit-3.dim_400x500.png`. Ensure even distribution: assign at least 10 tailors to each location area; assign each of the six categories to at least 20 tailors' services arrays (tailors may have multiple services); vary the number of services per tailor (1–4 categories) to create realistic diversity. Use a programmatic or data-generation approach (e.g., loops with template literals and randomization) to keep the file maintainable. All new entries must conform to the existing Tailor interface without introducing new fields or modifying the interface definition. Do not modify any other exports (AREAS, CATEGORIES arrays) or any logic in the file."
+        }
+      ]
+    }
+  ]
+}

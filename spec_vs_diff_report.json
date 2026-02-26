@@ -1,0 +1,31 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T18:23:33.245Z",
+  "summary": "The diff shows that `frontend/src/data/mockTailors.ts` was expanded from 8 to 224 tailor entries across 9 areas (24 per area), covering all 6 categories, with varied ratings, addresses, phone numbers, price ranges, and portfolio images. The file-diff summary confirms no other component, hook, or page files were modified. The implementation appears to satisfy the core REQ-10 requirements. However, the diff reveals a potential concern: the `priceRange` field in the interface includes a '₹₹₹₹' option (4 rupee symbols), which was not specified in REQ-10 (only ₹, ₹₹, ₹₹₹ were requested), and one original entry (id: '4') uses '₹₹₹₹'. Phone number format in visible entries uses '+91 98XXX XXXXX' spacing rather than a plain 10-digit string as specified in the AC.",
+  "missing_requirements": [
+    {
+      "id": "REQ-10",
+      "requirement": "Phone numbers are 10-digit strings prefixed with a Mumbai/India dialling pattern (e.g., 98XXXXXXXX).",
+      "reason": "Visible entries show phone numbers formatted as '+91 98201 45678' with spaces and a +91 prefix rather than a plain 10-digit string like '98XXXXXXXX'. The AC specifies 10-digit strings but the format used appears to be a formatted international number.",
+      "evidence": [
+        "frontend/src/data/mockTailors.ts"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "A fourth price range tier '₹₹₹₹' was added or retained in the Tailor interface and used in at least one entry.",
+      "reason": "REQ-10 specifies only three price range indicators: ₹, ₹₹, or ₹₹₹. The interface and at least one entry (id: '4', Santacruz Bridal Studio) use '₹₹₹₹', which was not requested.",
+      "evidence": [
+        "frontend/src/data/mockTailors.ts"
+      ]
+    }
+  ],
+  "confidence": 0.62,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/data/mockTailors.ts",
+    "project_state.json"
+  ]
+}

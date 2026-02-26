@@ -1,0 +1,38 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-25T18:23:33.248Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-10",
+        "summary": "Expand the mock tailor dataset in `frontend/src/data/mockTailors.ts` to include 200+ tailor entries. Each entry must have: a unique ID, a realistic Indian tailor name, a randomly varied star rating (3.0–5.0), a Mumbai-area street address (including building/shop number, street name, and neighbourhood), a 10-digit Indian mobile phone number, a distance value (0.3 km – 8.0 km), a price range indicator (₹, ₹₹, or ₹₹₹), one or more services from the existing services list, a location area drawn from the existing areas list (Andheri, Bandra, Juhu, Santacruz, Versova, Khar, Vile Parle, etc.), and portfolio image references reusing the existing image assets already referenced in the codebase. Distribute the tailors evenly across all available location areas and across all six categories (Western Wear, Ethnic Wear, Bridal Wear, Alterations, Kids Wear, Men's Formal Wear) so that filtering by any category or location area returns a meaningful, non-empty list. The `useTailors` hook and all existing filter logic must continue to work without changes.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/data/mockTailors.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/data/mockTailors.ts"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "build-template/README.md",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/data/mockTailors.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

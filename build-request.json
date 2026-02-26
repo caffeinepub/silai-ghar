@@ -1,0 +1,50 @@
+{
+  "kind": "build_request",
+  "title": "Expand mock tailor dataset to 200+ entries",
+  "projectName": "Silai Ghar",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Expand the mock tailor dataset in `frontend/src/data/mockTailors.ts` to include 200+ tailor entries. Each entry must have: a unique ID, a realistic Indian tailor name, a randomly varied star rating (3.0–5.0), a Mumbai-area street address (including building/shop number, street name, and neighbourhood), a 10-digit Indian mobile phone number, a distance value (0.3 km – 8.0 km), a price range indicator (₹, ₹₹, or ₹₹₹), one or more services from the existing services list, a location area drawn from the existing areas list (Andheri, Bandra, Juhu, Santacruz, Versova, Khar, Vile Parle, etc.), and portfolio image references reusing the existing image assets already referenced in the codebase. Distribute the tailors evenly across all available location areas and across all six categories (Western Wear, Ethnic Wear, Bridal Wear, Alterations, Kids Wear, Men's Formal Wear) so that filtering by any category or location area returns a meaningful, non-empty list. The `useTailors` hook and all existing filter logic must continue to work without changes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "add more filler tailors with random numbers and addresses so on the search bar or the catrogires can come up with 200+ options or 100+ whatever"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The mockTailors array contains at least 200 tailor objects.",
+        "Every tailor object has all required fields: id, name, rating, address, phone, distance, priceRange, services, area, and portfolioImages.",
+        "Phone numbers are 10-digit strings prefixed with a Mumbai/India dialling pattern (e.g., 98XXXXXXXX).",
+        "Addresses include a shop/building number, street name, and Mumbai neighbourhood.",
+        "Ratings are numeric values between 3.0 and 5.0 (one decimal place).",
+        "Tailors are spread across all available location areas with at least 10 entries per area.",
+        "Each of the six categories has at least 20 tailors whose services include that category.",
+        "Searching by category tile on the Home screen returns 20+ results for every category.",
+        "Filtering by any single location area chip in the Filter panel returns at least 10 results.",
+        "The Search Results screen shows a total count reflecting the full expanded dataset.",
+        "No existing component or hook files are modified other than `frontend/src/data/mockTailors.ts`."
+      ]
+    }
+  ],
+  "constraints": [
+    "Only `frontend/src/data/mockTailors.ts` should be modified — no changes to hooks, components, or pages.",
+    "All new tailor entries must conform to the existing Tailor interface defined in mockTailors.ts.",
+    "Reuse existing portfolio image asset references already present in the codebase; do not introduce new image dependencies.",
+    "Do not touch any file listed in frontend.immutablePaths."
+  ],
+  "nonGoals": [
+    "Adding backend persistence for tailor data.",
+    "Creating real or scraped tailor business data.",
+    "Modifying the filter logic, search logic, or any UI component.",
+    "Adding new image assets for the expanded tailor entries."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

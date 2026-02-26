@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm palette: cream, beige, soft brown, muted maroon */
+    --background: 0.97 0.012 75;
+    --foreground: 0.22 0.03 45;
+
+    --card: 0.99 0.008 70;
+    --card-foreground: 0.22 0.03 45;
+
+    --popover: 0.99 0.008 70;
+    --popover-foreground: 0.22 0.03 45;
+
+    /* Primary: muted maroon */
+    --primary: 0.42 0.09 20;
+    --primary-foreground: 0.97 0.012 75;
+
+    /* Secondary: soft beige */
+    --secondary: 0.93 0.02 70;
+    --secondary-foreground: 0.35 0.05 35;
+
+    /* Muted: light beige */
+    --muted: 0.94 0.015 72;
+    --muted-foreground: 0.52 0.04 50;
+
+    /* Accent: warm brown */
+    --accent: 0.88 0.03 65;
+    --accent-foreground: 0.30 0.06 30;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.88 0.02 68;
+    --input: 0.90 0.02 68;
+    --ring: 0.42 0.09 20;
+
+    /* Custom tokens */
+    --maroon: 0.42 0.09 20;
+    --maroon-light: 0.55 0.08 22;
+    --brown: 0.52 0.07 45;
+    --brown-light: 0.72 0.05 55;
+    --cream: 0.97 0.012 75;
+    --cream-dark: 0.93 0.02 70;
+    --beige: 0.90 0.025 68;
+
+    --chart-1: 0.646 0.222 41.116;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    --sidebar: 0.97 0.012 75;
+    --sidebar-foreground: 0.22 0.03 45;
+    --sidebar-primary: 0.42 0.09 20;
+    --sidebar-primary-foreground: 0.97 0.012 75;
+    --sidebar-accent: 0.93 0.02 70;
+    --sidebar-accent-foreground: 0.35 0.05 35;
+    --sidebar-border: 0.88 0.02 68;
+    --sidebar-ring: 0.42 0.09 20;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-container {
+    max-width: 430px;
+    margin: 0 auto;
+    min-height: 100dvh;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
